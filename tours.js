@@ -1,17 +1,15 @@
-let detailX;
-let detailY;
+let detailX,detailY,detailR, detailr;
+
 function setup() {
     createCanvas(320, 400, WEBGL);
     detailX=createSlider(2,25,3);
     detailY=createSlider(2,17,3);
-    // detailX.position(10, height + 5);
-    // detailY.position(10, height + 25)
-    // detailY.style('width', '80px');
-    // detailX.style('width', '80px');
+    detailR=createSlider(1,30,20);
+    detailr=createSlider(1,30,15)
   }
   
   function draw() {
     background(205, 102, 94);
     rotateY(millis() / 1000);
-    torus(30, 15, detailX.value(), detailY.value());
-  }
+    torus(detailR.value(), detailr.value(), detailX.value(), detailY.value());
+}
