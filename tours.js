@@ -11,5 +11,6 @@ function setup() {
   function draw() {
     background(205, 102, 94);
     rotateY(millis() / 1000);
+    rotateX(millis() / 1000);
     torus(detailR.value(), detailr.value(), detailX.value(), detailY.value());
 }
